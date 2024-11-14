@@ -33,8 +33,8 @@ jobs:
         run: |
           docker push 977098996766.dkr.ecr.ap-south-1.amazonaws.com/testlambda:latest
 
-      # - name: Deploy to AWS Lambda
-      #   run: |
-      #     aws lambda update-function-code \
-      #       --function-name your-lambda-function-name \
-      #       --image-uri ${{ secrets.ECR_REPOSITORY_URI }}:latest
+      - name: Deploy to AWS Lambda
+        run: |
+          aws lambda update-function-code \
+            --function-name s3lambda \
+            --image-uri ${{ secrets.ECR_REPOSITORY_URI }}:latest
