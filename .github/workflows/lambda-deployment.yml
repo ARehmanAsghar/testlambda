@@ -27,8 +27,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t testlambda1 .
-          docker tag testlambda:latest 977098996766.dkr.ecr.ap-south-1.amazonaws.com/testlambda1:latest
+          docker build -t testlambda .
+          docker tag testlambda:latest 977098996766.dkr.ecr.ap-south-1.amazonaws.com/testlambda:latest
       - name: Push Docker image to Amazon ECR
         run: |
           docker push 977098996766.dkr.ecr.ap-south-1.amazonaws.com/testlambda:latest
