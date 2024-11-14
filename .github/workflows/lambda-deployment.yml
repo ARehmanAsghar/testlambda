@@ -36,5 +36,5 @@ jobs:
       - name: Deploy to AWS Lambda
         run: |
           aws lambda update-function-code \
-            --function-name s3lambda \
+            --function-name myfucation \
             --image-uri ${{ secrets.ECR_REPOSITORY_URI }}:latest
