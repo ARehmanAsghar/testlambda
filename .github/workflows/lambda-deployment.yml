@@ -37,5 +37,5 @@ jobs:
         run: |
           aws lambda update-function-code \
             --function-name myfucation \
-            --environment Variables={DYNAMODB_TABLE_NAME=ImageMetadata}
+            --environment Variables={DYNAMODB_TABLE_NAME=ImageMetadata} \
             --image-uri ${{ secrets.ECR_REPOSITORY_URI }}:latest
