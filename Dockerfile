@@ -5,7 +5,7 @@ FROM public.ecr.aws/lambda/python:3.8
 RUN pip install boto3
 
 # Copy the application code to the container
-COPY . ${LAMBDA_TASK_ROOT}
+COPY lambda_function.py .
 
 # Set environment variables (optional)
 ENV DYNAMODB_TABLE_NAME=ImageMetadata
