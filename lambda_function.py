@@ -6,7 +6,7 @@ from datetime import datetime
 
 s3 = boto3.client('s3')
 dynamodb = boto3.resource('dynamodb')
-table_name = os.getenv('ImageMetadata')
+table_name = os.getenv('DYNAMODB_TABLE_NAME')
 table = dynamodb.Table(table_name)
 
 def lambda_handler(event, context):
